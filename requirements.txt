@@ -1,0 +1,12 @@
+aiofiles==0.8.0
+httptools==0.4.0
+Jinja2==3.1.2
+MarkupSafe==2.1.1
+multidict==6.0.2
+PyYAML==6.0
+sanic==22.6.0
+sanic-ext==22.6.1
+sanic-routing==22.3.0
+ujson==5.4.0
+uvloop==0.16.0
+websockets==10.3

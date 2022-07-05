@@ -1,0 +1,18 @@
+<!--templates/base.html-->
+<!--pip install Jinja2-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{{data["siteTitle"]}} | {{data["pageTitle"]}}</title>
+        <link href="/static/fonts/setup.css" rel="stylesheet">
+        <link href="/static/styles/base.css" rel="stylesheet">
+        <link href="/static/images/siteLogo.png" rel="icon" ></link>
+        <script src="/static/scripts/jquery.js"></script>
+    </head>
+    <body>
+        <p>{{data["message"]}}</p>
+    </body>
+</html>
