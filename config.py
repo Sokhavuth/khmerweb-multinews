@@ -1,10 +1,8 @@
 # config.py
 
-async def setting():
+class Config():
     config = {
         'siteTitle':'ពហុដំណឹង',
         'pageTitle':'',
         'message':'', 
     }
-
-    return config

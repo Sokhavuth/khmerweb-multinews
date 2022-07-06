@@ -1,4 +1,4 @@
-#routes/front/index.py
+# routes/front/index.py
 
 from sanic import Sanic
 from controllers.front.index import Index

@@ -13,6 +13,8 @@
         <script src="/static/scripts/jquery.js"></script>
     </head>
     <body>
-        <p>{{data["message"]}}</p>
+        {% if(data['route'] == '/') %}
+            {% include './front/home.html' %}
+        {% endif %}
     </body>
 </html>
