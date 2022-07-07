@@ -20,3 +20,4 @@ Session(app)
 
 from routes.front import index
 from routes.front import login
+from routes.admin import admin

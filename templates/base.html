@@ -17,6 +17,8 @@
             {% include './front/home.html' %}
         {% elif(data['route'] == '/login') %}
             {% include './front/login.html' %}
+        {% elif('/admin' in data['route']) %}
+            {% include './admin/index.html' %}
         {% endif %}
     </body>
 </html>
