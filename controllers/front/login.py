@@ -60,5 +60,5 @@ class Login():
 
 
     async def deleteItem(self,req):
-        del req.ctx.session['user']
+        req.ctx.session['user'] = None
         return redirect('/')
