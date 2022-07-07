@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: 20% auto;
     grid-gap: 5px;
+    align-items: center;
 }
 
 .Login .outer form a{
@@ -28,4 +29,8 @@
 .Login .outer form input{
     font: var(--body-font);
     padding: 2px 5px;
+}
+
+.Login .outer form .info{
+    text-align: center;
 }
