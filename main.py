@@ -1,6 +1,6 @@
 # main.py
 # pip install sanic[ext]
-# pip install python-dotenv
+# pip install sanic_session
 
 import os,time
 os.environ['TZ'] = 'Asia/Phnom_Penh'
@@ -15,4 +15,8 @@ app.config.update(Config.config)
 from models.connectdb import Database
 app.ctx.mydb = Database.mydb
 
+from sanic_session import Session
+Session(app)
+
 from routes.front import index
+from routes.front import login
