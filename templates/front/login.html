@@ -1,1 +1,14 @@
-Login
+<!--templates/front/login.html-->
+<link rel="stylesheet" href="/static/styles/front/login.css" />
+
+<section class="Login">
+    <div class="outer">
+        <div class="title">{{data['pageTitle']}}</div>
+        <form action="/login" method="post">
+            <a>Email:</a><input type="email" name="email" required />
+            <a>ពាក្យ​សំងាត់ៈ</a><input type="password" name="password" required />
+            <a></a><input type="submit" value="បញ្ជូន" />
+            <a></a><div class="info">{{data['message']}}</div>
+        </form>
+    </div>
+</section>

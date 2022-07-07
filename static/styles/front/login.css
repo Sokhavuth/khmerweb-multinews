@@ -1,0 +1,31 @@
+/* static/styles/front/login.css */
+
+.Login .outer{
+    background: var(--background);
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.Login .outer .title{
+    background: var(--background-dark);
+    color: white;
+    text-align: center;
+    font: 22px/1.5 Oswald,Limonf3;
+    padding: 3px;
+}
+
+.Login .outer form{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-gap: 5px;
+}
+
+.Login .outer form a{
+    text-align: right;
+}
+
+.Login .outer form input{
+    font: var(--body-font);
+    padding: 2px 5px;
+}

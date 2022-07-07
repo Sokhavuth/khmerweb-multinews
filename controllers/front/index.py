@@ -2,11 +2,12 @@
 
 from sanic import Sanic
 from sanic_ext import render
+from copy import deepcopy
 
 class Index():
     def __init__(self):
         app = Sanic.get_app('Multinews')
-        self.config = app.config
+        self.config = deepcopy(app.config)
 
     async def getItem(self,req):
         self.config["pageTitle"] = 'ទំព័រ​ដើម'
