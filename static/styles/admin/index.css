@@ -1,0 +1,78 @@
+/* static/styles/admin/index.css */
+
+.Index .header{
+    background: var(--background-dark);
+    color: white;
+    border-bottom: 7px solid white;
+    margin-bottom: 20px;
+}
+
+.Index .header .inner{
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.Index .header .inner .logo{
+    font: 25px/1.5 Sowald, Limonf3;
+}
+
+.Index .header .inner form{
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+}
+
+.Index .header .inner form input,
+.Index .header .inner form select{
+    font: var(--body-font);
+    padding: 2px 5px;
+}
+
+.Index .header .inner .logout{
+    text-align: right;
+}
+
+.Index .header .inner .logout a{
+    color: lavender;
+}
+
+.Index .main{
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+
+.Index .main .sidebar{
+    background: var(--background);
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.Index .main .sidebar .inner{
+    display: grid;
+    grid-template-columns: 25% auto;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.Index .main .sidebar .inner img{
+    width: 100%;
+}
+
+.Index .main .sidebar .inner .title{
+    font: 18px/1.5 Oswald, Bayon;
+}
+
+.Index footer .info{
+    margin: 10px 0;
+    background: var(--background);
+    text-align: center;
+    padding: 7px;
+}
+
+.Index footer .pagination{
+    text-align: center;
+    padding: 5px 0 0;
+    background: var(--background);
+    margin: 10px 0 30px;
+}

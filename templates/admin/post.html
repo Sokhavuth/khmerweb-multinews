@@ -1,0 +1,20 @@
+<!--templates/admin/post.html-->
+<link rel="stylesheet" href="/static/styles/admin/post.css" />
+<script src="/static/scripts/ckeditor/ckeditor.js"></script>
+
+<section class="Post">
+    <form action="/admin/post" method="post">
+        <input type="text" name="title" required placeholder="ចំណងជើង" />
+        <textarea name="content" id="editor"></textarea>
+        <input type="text" name="categories" required placeholder="ជំពូក​ការផ្សាយ" />
+        <div class="wrapper">
+            <select name="category" class="category" >
+                <option>ការផ្សាយ</option>
+            </select>
+            <input type="text" name="thumb" required placeholder="តំណរភ្ជាប់​រូប​តំណាង" />
+            <input type="datetime-local" name="datetime" required />
+            <input type="submit" value="បញ្ជូន" />
+        </div>
+    </form>
+</section>
+<script src="/static/scripts/ckeditor/config.js"></script>

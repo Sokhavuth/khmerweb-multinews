@@ -1,1 +1,60 @@
-Index
+<!--templates/admin/index.html-->
+
+<link rel="stylesheet" href="/static/styles/admin/index.css" />
+
+<section class="Index">
+    <div class="header">
+        <div class="inner region">
+            <div class="logo">{{data['pageTitle']}}</div>
+            <form action="/admin/search" method="post">
+                <select name="adminSearch" >
+                    <option>Post</option>
+                </select>
+                <input type="text" name="q" required placeholder="Search" />
+                <input type="submit" value="ស្វែង​រក" />
+            </form>
+            <div class="logout">
+                <a href="/">ទំព័រ​មុខ</a> | <a href="/logout">ចេញ​ក្រៅ</a> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main region">
+        <div class="sidebar">
+            <div class="inner">
+                <a href="/admin/post"><img src="/static/images/movie.png" /></a>
+                <a class="title" href="/admin/post">ការផ្សាយ</a>
+
+                <a href="/admin/book"><img src="/static/images/books.png" /></a>
+                <a class="title" href="/admin/book">សៀវភៅ</a>
+
+                <a href="/admin/category"><img src="/static/images/category.png" /></a>
+                <a class="title" href="/admin/category">ជំពូក</a>
+
+                <a href="/admin/upload"><img src="/static/images/upload.png" /></a>
+                <a class="title" href="/admin/upload">Upload</a>
+
+                <a href="/admin/user"><img src="/static/images/users.png" /></a>
+                <a class="title" href="/admin/user">អ្នក​ប្រើប្រាស់</a>
+
+                <a href="/admin/setting"><img src="/static/images/setting.png" /></a>
+                <a class="title" href="/admin/setting">Setting</a>
+            </div>
+        </div>
+
+        <div class="content">
+            
+        </div>
+    </div>
+
+    <footer class="region">
+        {% if('count' in data) %}
+            <div class="info">សរុប​ទាំងអស់​​មាន​ចំនួនៈ {{ data["count"] }}</div>
+        {% else %}
+            <div class="info">សរុប​ទាំងអស់​​មាន​ចំនួនៈ </div>
+        {% endif %}
+        
+        
+        <div class="pagination"><img src="/static/images/load-more.png" /></div>
+    </footer>
+</section>

@@ -1,0 +1,13 @@
+/* static/styles/admin/post.css */
+
+.Index .main .content .post .ck-editor__editable{
+    min-height: 300px;
+    color: black;
+}
+
+.Index .main .content .post input,
+.Index .main .content select{
+    font: var(--body-font);
+    width: 100%;
+    padding: 2px 5px;
+}
