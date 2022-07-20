@@ -22,7 +22,7 @@ async def postItem(req):
 
 @app.get("/logout")
 async def deleteItem(req):
-    if(req.ctx.session.get('user')):
+    if(req.ctx.session.get('user') != None):
         return await instance.deleteItem(req)
     else:
         return redirect('/login')
