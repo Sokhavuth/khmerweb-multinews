@@ -9,7 +9,7 @@ instance = Login()
  
 @app.get("/login")
 async def getItem(req):
-    if(req.ctx.session.get('user') != None):
+    if(req.ctx.session.get('user')):
         return redirect('/admin/post')
     else:
         return await instance.getItem(req)

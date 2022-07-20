@@ -51,9 +51,11 @@ class Login():
                 req.ctx.session['user'] = {'id':user['id'],'role':user['role']}
                 return redirect('/admin/post')
             else:
+                self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
                 self.config['message'] = 'ពាក្យ​សំងាត់របស់អ្នក​​មិន​ត្រឹមត្រូវ​ទេ!'
                 return await render("base.html", context={"data":self.config})
         else:
+            self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
             self.config['message'] = 'Email របស់​អ្នក​មិន​ត្រឹមត្រូវ​ទេ!'
             return await render("base.html", context={"data":self.config})
 
