@@ -12,8 +12,8 @@ app = Sanic('Multinews')
 app.static("/static", "./static")
 app.config.update(Config.config)
 
-from models.connectdb import Database
-app.ctx.mydb = Database.mydb
+from models.connectdb import mydb
+app.ctx.mydb = mydb
 
 from sanic_session import Session
 Session(app)

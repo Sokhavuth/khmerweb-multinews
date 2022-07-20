@@ -13,7 +13,6 @@ class Login():
         self.config = deepcopy(app.config)
         self.mydb = app.ctx.mydb
 
-
     async def getItem(self,req):
         self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
         self.config['route'] = '/login'
@@ -44,7 +43,7 @@ class Login():
         email = req.form.get('email')
         password = req.form.get('password')
 
-        user = self.mydb['users'].find_one({'email':email})
+        user = await self.mydb['users'].find_one({'email':email})
         
         if user:
             if(bcrypt.checkpw(password.encode('utf-8'), user['password'])):
