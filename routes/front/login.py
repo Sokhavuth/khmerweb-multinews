@@ -10,7 +10,7 @@ instance = Login()
 @app.get("/login")
 async def getItem(req):
     if(req.ctx.session.get('user')):
-        return redirect('/admin/post')
+        return await redirect('/admin/post')
     else:
         return await instance.getItem(req)
 
@@ -22,7 +22,7 @@ async def postItem(req):
 
 @app.get("/logout")
 async def deleteItem(req):
-    if(req.ctx.session.get('user') != None):
+    if(req.ctx.session.get('user')):
         return await instance.deleteItem(req)
     else:
-        return redirect('/login')
+        return await redirect('/login')
