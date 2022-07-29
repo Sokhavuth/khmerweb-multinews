@@ -15,8 +15,8 @@ app.config.update(Config.config)
 from models.connectdb import mydb
 app.ctx.mydb = mydb
 
-from sanic_session import Session
-Session(app)
+from sanic_session import Session, InMemorySessionInterface
+Session(app, interface=InMemorySessionInterface())
 
 from routes.front import index
 from routes.front import login
