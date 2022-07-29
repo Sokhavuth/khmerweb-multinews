@@ -13,6 +13,7 @@ class Login():
         self.mydb = self.app.ctx.mydb
 
     async def getItem(self,req):
+        self.config = deepcopy(self.app.config)
         self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
         self.config['route'] = '/login'
 
