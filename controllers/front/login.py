@@ -9,9 +9,8 @@ from sanic.response import redirect
 
 class Login():
     def __init__(self):
-        app = Sanic.get_app('Multinews')
-        self.config = deepcopy(app.config)
-        self.mydb = app.ctx.mydb
+        self.app = Sanic.get_app('Multinews')
+        self.mydb = self.app.ctx.mydb
 
     async def getItem(self,req):
         self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
@@ -43,6 +42,8 @@ class Login():
         email = req.form.get('email')
         password = req.form.get('password')
 
+        self.config = deepcopy(self.app.config)
+
         user = await self.mydb['users'].find_one({'email':email})
         
         if user:
@@ -53,10 +54,12 @@ class Login():
             else:
                 self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
                 self.config['message'] = 'ពាក្យ​សំងាត់របស់អ្នក​​មិន​ត្រឹមត្រូវ​ទេ!'
+                self.config['route'] = '/login'
                 return await render("base.html", context={"data":self.config})
         else:
             self.config["pageTitle"] = 'ទំព័រ​ចុះ​ឈ្មោះ​ចូល​​ក្នុង'
             self.config['message'] = 'Email របស់​អ្នក​មិន​ត្រឹមត្រូវ​ទេ!'
+            self.config['route'] = '/login'
             return await render("base.html", context={"data":self.config})
 
 
